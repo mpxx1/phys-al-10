@@ -44,7 +44,11 @@ function App() {
             for (let i = 0; i < arr.length; ++i) {
                 const clr = 255 * (1 - arr[i] / 4)
                 const ctx = canvasRef.current.getContext("2d")
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-expect-error
                 ctx.fillStyle = `rgb(${clr}, ${clr}, ${clr})`
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                // @ts-expect-error
                 ctx.fillRect(i, 0, 1, 500)
             }
 
